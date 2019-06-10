@@ -6,11 +6,12 @@ yum install -y gcc gcc-c++
 yum install -y xz
 cd /Data/apps
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
-tar -zxvf pcre-8.39.tar.gz
-cd pcre-8.39
+tar -zxvf pcre-8.21.tar.gz
+cd pcre-8.21
 ./configure
 make
 make install
+ln -s /usr/local/lib/libpcre.so.1 /lib64
 cd /Data/apps
 wget http://zlib.net/zlib-1.2.11.tar.gz
 tar -zxvf zlib-1.2.11.tar.gz
